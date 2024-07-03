@@ -129,7 +129,7 @@ function updateScore() {
 function endGame(result) {
     clearInterval(timer);
     if (result === 'ganar') {
-        questionElement.textContent = '¡Parebéns, você ganhou!';
+        questionElement.textContent = '¡Parabéns, você ganhou!';
     } else {
         questionElement.textContent = 'Você perdeu. Boa sorte na próxima vez.';
     }
