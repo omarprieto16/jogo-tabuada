@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Tabuada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <a href="https://omarprieto16.github.io/juego-tablas-multiplicar" id="language"><img src="img/argentina.svg" alt="Español" width="50"/></a>
+        <h1>Jogo Tabuada</h1>
+        <div id="question-container">
+            <p id="question">Pressione 'Iniciar Jogo' para començar</p>
+            <input type="number" id="answer" step="1" oninput="validateInput(this)" placeholder="Sua resposta" disabled>
+        </div>
+        <div id="timer-container">
+            <p>Tempo restante: <span id="timer">15</span> segundos</p>
+        </div>
+        <div id="controls">
+            <button id="start-button">Iniciar Jogo</button>
+            <button id="restart-button" disabled>Reiniciar Jogo</button>
+        </div>
+        <div id="score-container">
+            <p>Pontuação: <span id="score">0</span></p>
+        </div>
+        <div id="results-container">
+            <h2>Resultados</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Partida</th>
+                        <th>Acertos</th>
+                        <th>Errores</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <audio id="correct-sound" src="sounds/correct.mp3"></audio>
+    <audio id="incorrect-sound" src="sounds/incorrect.mp3"></audio>
+    <audio id="timeout-sound" src="sounds/timeout.mp3"></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+    <audio id="lose-sound" src="sounds/lose.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
